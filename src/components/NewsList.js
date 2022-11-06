@@ -9,7 +9,9 @@ function NewsList(props) {
   return (
     <div>
       {data
-        ? data.articles.map(news => <NewsItem data={news} key={news.url} />)
+        ? data.articles
+            .sort((a, b) => a.title  !== b.title ? a.title < b.title ? -1 : 1 : 0)
+            .map((news) => <NewsItem data={news} key={news.url} />)
         : "Loading"}
     </div>
   );
