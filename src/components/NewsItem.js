@@ -2,8 +2,10 @@ import React from "react";
 
 function NewsItem({ data }) {
   return (
-    <div>
-      <h1>{data.title}</h1>
+    <div className="news">
+      <h1 className="news__title">{data.title}</h1>
+      <p className="news__desc">{data.description}</p>
+      <h5 className="news__author">{data.author}</h5>
     </div>
   );
 }
