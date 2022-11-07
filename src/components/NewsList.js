@@ -7,9 +7,7 @@ function NewsList() {
   console.log(data);
 
   return (
-    
     <>
-    
       <div>
         <h1 className="header">News Feed</h1>
       </div>
@@ -22,7 +20,6 @@ function NewsList() {
               .map((news) => <NewsItem data={news} key={news.url} />)
           : "Loading"}
       </div>
-      
     </>
   );
 }
